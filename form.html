@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせフォーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+h1 {
+  text-align: center;
+}
+.Form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.Form-Item-Label-Required {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: greenyellow;
+}
+.Form-Btn-Free {
+  background-color: rgb(188, 186, 186);
+}
+hr{
+  margin: 20px;
+}   
+</style>
+<body>
+    <h1>お問い合わせフォームサンプル</h1>
+    <form action="" method="get">
+        <div class="Form">
+            <hr>
+            <div class="Form-Item">
+                <p class="Form-Items-Label"><span class="Form-Item-Label-Required">必須</span>氏名</p>
+                <input type="text" name="name" class="Form-Item-Input" placeholder="例）電子太郎" required>
+            </div>
+            <hr>
+            <div class="Form-Item">
+                <p class="Form-Items-Label"><span class="Form-Item-Label-Required Form-Btn-Free">任意</span>電話番号</p>
+                <input type="text" name="tel" class="Form-Item-Input" placeholder="例）000-0000-0000">
+            </div>
+            <hr>
+            <div class="Form-Item">
+                <p class="Form-Items-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
+                <input type="email" name="mail" class="Form-Item-Input" placeholder="例）example@abc.com" required>
+            </div>
+            <hr>
+            <div class="Form-Item">
+                <p class="Form-Items-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
+                <textarea class="Form-Item-Textarea" name="inquiry" required></textarea>
+            </div>
+            <hr>
+            <div class="Form-Item">
+                <p class="Form-Items-Label"><span class="Form-Item-Label-Required Form-Btn-Free">任意</span>興味があるもの</p>
+                <input type="checkbox" id="HTML" name="interest" value="HTML">
+                <label for="HTML">HTML</label>
+                <input type="checkbox" id="css" name="interest" value="css">
+                <label for="css">css</label>
+                <input type="checkbox" id="JavaScript" name="interest" value="JavaScript">
+                <label for="JavaScript">JavaScript</label>
+            </div>
+            <hr>
+            <div class="Form-Item">
+                <p class="Form-Items-Label"><span class="Form-Item-Label-Required">必須</span>お知らせメール</p>
+                <label> <input type="radio" name="ml" value="送信してもよい" checked required>送信してもよい</label>
+                <label> <input type="radio" name="ml" value="送信しない">送信しない</label>
+            </div> <input type="submit" value="送信する">
+        </div>
+    </form>
+</body>
+</html>
